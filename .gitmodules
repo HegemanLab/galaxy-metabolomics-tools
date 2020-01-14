@@ -1,0 +1,6 @@
+[submodule "submodules/usegalaxy-eu-tools"]
+	path = submodules/usegalaxy-eu-tools
+	url = https://github.com/usegalaxy-eu/usegalaxy-eu-tools
+[submodule "submodules/w4m-config"]
+	path = submodules/w4m-config
+	url = https://github.com/workflow4metabolomics/w4m-config
