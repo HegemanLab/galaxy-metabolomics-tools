@@ -1,157 +1,230 @@
+---
 install_repository_dependencies: true
 install_resolver_dependencies: true
 install_tool_dependencies: true
+
 tools:
-- name: msnbase_readmsdata
-  owner: lecorguille
-  tool_panel_section_label: preprocessing_LCMS
-- name: xcms_plot_chromatogram
-  owner: lecorguille
-  tool_panel_section_label: preprocessing_LCMS
-- name: xcms_xcmsset
-  owner: lecorguille
-  tool_panel_section_label: preprocessing_LCMS
-- name: xcms_merge
-  owner: lecorguille
-  tool_panel_section_label: preprocessing_LCMS
-- name: xcms_group
-  owner: lecorguille
-  tool_panel_section_label: preprocessing_LCMS
-- name: xcms_retcor
-  owner: lecorguille
-  tool_panel_section_label: preprocessing_LCMS
-- name: xcms_fillpeaks
-  owner: lecorguille
-  tool_panel_section_label: preprocessing_LCMS
-- name: camera_annotate
-  owner: lecorguille
-  tool_panel_section_label: preprocessing_LCMS
-- name: xcms_summary
-  owner: lecorguille
-  tool_panel_section_label: preprocessing_LCMS
-- name: camera_combinexsannos
-  owner: mmonsoor
-  tool_panel_section_label: preprocessing_LCMS
-- name: profia
-  owner: ethevenot
-  tool_panel_section_label: preprocessing_FIAMS
-- name: metams_rungc
-  owner: yguitton
-  tool_panel_section_label: preprocessing_GCMS
-- name: nmr_preprocessing
-  owner: marie-tremblay-metatoul
-  tool_panel_section_label: preprocessing_NMR
-- name: nmr_alignment
-  owner: marie-tremblay-metatoul
-  tool_panel_section_label: preprocessing_NMR
-- name: nmr_bucketing
-  owner: marie-tremblay-metatoul
-  tool_panel_section_label: preprocessing_NMR
-- name: batchcorrection
-  owner: melpetera
-  tool_panel_section_label: normalization_quality_control_LCMS_FIAMS
-- name: normalization
-  owner: marie-tremblay-metatoul
-  tool_panel_section_label: normalization_quality_control_ALL
-- name: transformation
-  owner: ethevenot
-  tool_panel_section_label: normalization_quality_control_ALL
-- name: qualitymetrics
-  owner: ethevenot
-  tool_panel_section_label: normalization_quality_control_ALL
-- name: withinvariation
-  owner: yguitton
-  tool_panel_section_label: normalization_quality_control_ALL
-- name: univariate
-  owner: ethevenot
-  tool_panel_section_label: statistics_ALL
-- name: multivariate
-  owner: ethevenot
-  tool_panel_section_label: statistics_ALL
-- name: anova
-  owner: lecorguille
-  tool_panel_section_label: statistics_ALL
-- name: mixmodel4repeated_measures
-  owner: jfrancoismartin
-  tool_panel_section_label: statistics_ALL
-- name: asca
-  owner: marie-tremblay-metatoul
-  tool_panel_section_label: statistics_ALL
-- name: biosigner
-  owner: ethevenot
-  tool_panel_section_label: statistics_ALL
-- name: corr_table
-  owner: melpetera
-  tool_panel_section_label: statistics_ALL
-- name: heatmap
-  owner: ethevenot
-  tool_panel_section_label: statistics_ALL
-- name: hmdb_ms_search
-  owner: fgiacomoni
-  tool_panel_section_label: annotation_LCMS_FIAMS
-- name: bank_inhouse
-  owner: fgiacomoni
-  tool_panel_section_label: annotation_LCMS_FIAMS
-- name: lipidmaps_textsearch
-  owner: fgiacomoni
-  tool_panel_section_label: annotation_LCMS_FIAMS
-- name: massbank_ws_searchspectrum
-  owner: fgiacomoni
-  tool_panel_section_label: annotation_LCMS_FIAMS
-- name: lcmsmatching
-  owner: prog
-  tool_panel_section_label: annotation_LCMS_FIAMS
-- name: probmetab
-  owner: mmonsoor
-  tool_panel_section_label: annotation_LCMS
-- name: genform
-  owner: workflow4metabolomics
-  tool_panel_section_label: annotation_LCMS
-- name: vkmz
-  owner: eslerm
-  tool_panel_section_label: annotation_LCMS
-- name: golm_ws_lib_search
-  owner: fgiacomoni
-  tool_panel_section_label: annotation_GCMS
-- name: nmr_annotation
-  owner: marie-tremblay-metatoul
-  tool_panel_section_label: preprocessing_NMR
-- name: xcms_export_samplemetadata
-  owner: lecorguille
-  tool_panel_section_label: data_handling_ALL
-- name: generic_filter
-  owner: melpetera
-  tool_panel_section_label: data_handling_ALL
-- name: tablemerge
-  owner: melpetera
-  tool_panel_section_label: data_handling_ALL
-- name: checkformat
-  owner: ethevenot
-  tool_panel_section_label: data_handling_ALL
-- name: intensity_checks
-  owner: melpetera
-  tool_panel_section_label: data_handling_ALL
-- name: idchoice
-  owner: melpetera
-  tool_panel_section_label: data_handling_ALL
-- name: w4mclassfilter
-  owner: eschen42
-  tool_panel_section_label: data_handling_ALL
-- name: w4mjoinpn
-  owner: eschen42
-  tool_panel_section_label: data_handling_ALL
-- name: w4mcorcov
-  owner: eschen42
-  tool_panel_section_label: data_handling_ALL
-- name: msnbase_readmsdata
-  owner: lecorguille
-  tool_panel_section_label: data_handling_ALL
-- name: msconvert
-  owner: galaxyp
-  tool_panel_section_label: data_handling_ALL
-- name: thermo_raw_file_converter
-  owner: galaxyp
-  tool_panel_section_label: data_handling_ALL
-- name: msms_extractor
-  owner: galaxyp
-  tool_panel_section_label: data_handling_ALL
+# preprocessing
+## LCMS
+  - name: msnbase_readmsdata
+    owner: lecorguille
+    tool_panel_section_label: preprocessing_LCMS
+
+  - name: xcms_xcmsset
+    owner: lecorguille
+    tool_panel_section_label: preprocessing_LCMS
+
+  - name: xcms_plot_chromatogram
+    owner: lecorguille
+    tool_panel_section_label: preprocessing_LCMS
+
+  - name: xcms_merge
+    owner: lecorguille
+    tool_panel_section_label: preprocessing_LCMS
+
+  - name: xcms_group
+    owner: lecorguille
+    tool_panel_section_label: preprocessing_LCMS
+
+  - name: xcms_retcor
+    owner: lecorguille
+    tool_panel_section_label: preprocessing_LCMS
+
+  - name: xcms_fillpeaks
+    owner: lecorguille
+    tool_panel_section_label: preprocessing_LCMS
+
+  - name: camera_annotate
+    owner: lecorguille
+    tool_panel_section_label: preprocessing_LCMS
+
+  - name: xcms_summary
+    owner: lecorguille
+    tool_panel_section_label: preprocessing_LCMS
+
+  - name: camera_combinexsannos
+    owner: mmonsoor
+    tool_panel_section_label: preprocessing_LCMS
+
+## FIAMS
+  - name: profia
+    owner: ethevenot
+    tool_panel_section_label: preprocessing_FIAMS
+
+## GCMS
+  - name: metams_rungc
+    owner: yguitton
+    tool_panel_section_label: preprocessing_GCMS
+
+## NMR
+  - name: nmr_preprocessing
+    owner: marie-tremblay-metatoul
+    tool_panel_section_label: preprocessing_NMR
+
+  - name: nmr_alignment
+    owner: marie-tremblay-metatoul
+    tool_panel_section_label: preprocessing_NMR
+
+  - name: nmr_bucketing
+    owner: marie-tremblay-metatoul
+    tool_panel_section_label: preprocessing_NMR
+
+
+# QC
+## LCMS_FIAMS
+  - name: batchcorrection
+    owner: melpetera
+    tool_panel_section_label: normalization_quality_control_LCMS_FIAMS
+
+## ALL
+  - name: normalization
+    owner: marie-tremblay-metatoul
+    tool_panel_section_label: normalization_quality_control_ALL
+
+  - name: transformation
+    owner: ethevenot
+    tool_panel_section_label: normalization_quality_control_ALL
+
+  - name: qualitymetrics
+    owner: ethevenot
+    tool_panel_section_label: normalization_quality_control_ALL
+
+  - name: withinvariation
+    owner: yguitton
+    tool_panel_section_label: normalization_quality_control_ALL
+
+
+# statistics
+## ALL
+  - name: univariate
+    owner: ethevenot
+    tool_panel_section_label: statistics_ALL
+
+  - name: multivariate
+    owner: ethevenot
+    tool_panel_section_label: statistics_ALL
+
+  - name: anova
+    owner: lecorguille
+    tool_panel_section_label: statistics_ALL
+
+  - name: mixmodel4repeated_measures
+    owner: jfrancoismartin
+    tool_panel_section_label: statistics_ALL
+
+  - name: asca
+    owner: marie-tremblay-metatoul
+    tool_panel_section_label: statistics_ALL
+
+  - name: biosigner
+    owner: ethevenot
+    tool_panel_section_label: statistics_ALL
+
+  - name: corr_table
+    owner: melpetera
+    tool_panel_section_label: statistics_ALL
+
+  - name: heatmap
+    owner: ethevenot
+    tool_panel_section_label: statistics_ALL
+
+
+# annotation
+## LCMS_FIAMS
+  - name: hmdb_ms_search
+    owner: fgiacomoni
+    tool_panel_section_label: annotation_LCMS_FIAMS
+
+  - name: bank_inhouse
+    owner: fgiacomoni
+    tool_panel_section_label: annotation_LCMS_FIAMS
+
+  - name: lipidmaps_textsearch
+    owner: fgiacomoni
+    tool_panel_section_label: annotation_LCMS_FIAMS
+
+  - name: massbank_ws_searchspectrum
+    owner: fgiacomoni
+    tool_panel_section_label: annotation_LCMS_FIAMS
+
+  - name: lcmsmatching
+    owner: prog
+    tool_panel_section_label: annotation_LCMS_FIAMS
+
+## LCMS
+  - name: probmetab
+    owner: mmonsoor
+    tool_panel_section_label: annotation_LCMS
+
+  - name: genform
+    owner: workflow4metabolomics
+    tool_panel_section_label: annotation_LCMS
+
+  - name: vkmz
+    owner: eslerm
+    tool_panel_section_label: annotation_LCMS
+
+## GCMS
+  - name: golm_ws_lib_search
+    owner: fgiacomoni
+    tool_panel_section_label: annotation_GCMS
+
+## NMR
+  - name: nmr_annotation
+    owner: marie-tremblay-metatoul
+    tool_panel_section_label: preprocessing_NMR
+
+
+# data_handling
+## ALL
+  - name: xcms_export_samplemetadata
+    owner: lecorguille
+    tool_panel_section_label: data_handling_ALL
+
+  - name: generic_filter
+    owner: melpetera
+    tool_panel_section_label: data_handling_ALL
+
+  - name: tablemerge
+    owner: melpetera
+    tool_panel_section_label: data_handling_ALL
+
+  - name: checkformat
+    owner: ethevenot
+    tool_panel_section_label: data_handling_ALL
+
+  - name: intensity_checks
+    owner: melpetera
+    tool_panel_section_label: data_handling_ALL
+
+  - name: idchoice
+    owner: melpetera
+    tool_panel_section_label: data_handling_ALL
+
+  - name: w4mclassfilter
+    owner: eschen42
+    tool_panel_section_label: data_handling_ALL
+
+  - name: w4mjoinpn
+    owner: eschen42
+    tool_panel_section_label: data_handling_ALL
+
+  - name: w4mcorcov
+    owner: eschen42
+    tool_panel_section_label: data_handling_ALL
+
+  - name: msnbase_readmsdata
+    owner: lecorguille
+    tool_panel_section_label: data_handling_ALL
+
+  - name: msconvert
+    owner: galaxyp
+    tool_panel_section_label: data_handling_ALL
+
+  - name: thermo_raw_file_converter
+    owner: galaxyp
+    tool_panel_section_label: data_handling_ALL
+
+  - name: msms_extractor
+    owner: galaxyp
+    tool_panel_section_label: data_handling_ALL
