@@ -34,16 +34,8 @@ tools:
     owner: lecorguille
     tool_panel_section_label: preprocessing_LCMS
 
-  - name: camera_annotate
-    owner: lecorguille
-    tool_panel_section_label: preprocessing_LCMS
-
   - name: xcms_summary
     owner: lecorguille
-    tool_panel_section_label: preprocessing_LCMS
-
-  - name: camera_combinexsannos
-    owner: mmonsoor
     tool_panel_section_label: preprocessing_LCMS
 
 ## FIAMS
@@ -152,6 +144,14 @@ tools:
     tool_panel_section_label: annotation_LCMS_FIAMS
 
 ## LCMS
+  - name: camera_annotate
+    owner: lecorguille
+    tool_panel_section_label: preprocessing_LCMS
+
+  - name: camera_combinexsannos
+    owner: mmonsoor
+    tool_panel_section_label: preprocessing_LCMS
+
   - name: probmetab
     owner: mmonsoor
     tool_panel_section_label: annotation_LCMS
@@ -228,3 +228,6 @@ tools:
   - name: msms_extractor
     owner: galaxyp
     tool_panel_section_label: data_handling_ALL
+
+# Data handling
+# graphicsmagick_image_convert
