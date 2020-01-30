@@ -76,6 +76,10 @@ tools:
     owner: ethevenot
     tool_panel_section_label: normalization_quality_control_ALL
 
+  - name: instensity_checks
+    owner: melpetera
+    tool_panel_section_label: normalization_quality_control_ALL
+
   - name: withinvariation
     owner: yguitton
     tool_panel_section_label: normalization_quality_control_ALL
