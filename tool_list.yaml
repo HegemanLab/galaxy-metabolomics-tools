@@ -63,11 +63,6 @@ tools:
 
 
 # QC
-## LCMS_FIAMS
-  - name: batchcorrection
-    owner: melpetera
-    tool_panel_section_label: normalization_quality_control_LCMS_FIAMS
-
 ## ALL
   - name: normalization
     owner: marie-tremblay-metatoul
@@ -84,6 +79,11 @@ tools:
   - name: withinvariation
     owner: yguitton
     tool_panel_section_label: normalization_quality_control_ALL
+
+## LCMS_FIAMS
+  - name: batchcorrection
+    owner: melpetera
+    tool_panel_section_label: normalization_quality_control_LCMS_FIAMS
 
 
 # statistics
